@@ -86,6 +86,14 @@ c) Each cell in an academic level is at 3% higher than the previous cell in that
 d) The Index of Rationalization (IOR) is 2.67 for present AGP less than Rs.10, 000 and 2.72
 for the AGP of Rs.10, 000 and above.
 e) The entry pay for each level is as follows:
+------------------------------------------------
+| Level | Academic Grade Pay (Rs.) | Entry Pay (Rs.) |
+| 10 | 6,000 | 21,600 |
+| 11 | 7,000 | 25,790 |
+| 12 | 8,000 | 29,900 |
+| 13A | 9,000 | 49,200 |
+| 14 | 10,000 | 53,000 |
+------------------------------------------------
 f) The Pay matrix based on the above propositions on Academic Levels, Cells and Entry Pay
 is at Appendix -I
 g) For fixation of pay of an employee in the Pay Matrix as on 1st January, 2016, the existing
@@ -103,12 +111,38 @@ h) If a situation arises whenever more than two stages are bunched together, one
 additional increment equal to 3 percent may be given for every two stages bunched,
 and pay fixed in the subsequent cell in the pay matrix.
 (ii) Revised pay for Teachers in Universities and Colleges
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Existing Pay | Revised Pay |
+| Assistant Professor / Hospital Registrar/ Subject Matter Specialist/ Scientist Animal Science/ Scientist Biochemistry / Pathologist / Hostel Rector/ Biotechnologist/ Scientist (Analytical Chemistry) (at Rs. 6000 AGP in PB Rs. 15,600 - 39,100) | Assistant Professor / Hospital Registrar/ Subject Matter Specialist / Scientist Animal Science/ Scientist Biochemistry / Pathologist / Hostel Rector/ Biotechnologist/ Scientist (Analytical Chemistry) (at Academic Level 10 with rationalized entry pay of Rs. 57,700/-) |
+| Assistant Professor / Hospital Registrar/ Subject Matter Specialist / Scientist Animal Science/ Scientist Biochemistry / Pathologist / Hostel Rector/ Biotechnologist/ Scientist  |  (Analytical Chemistry) (at Rs. 7000 AGP in PB Rs. 15,600 - 39,100) | Assistant Professor/ Hospital Registrar/ Subject Matter Specialist Scientist Animal Science/ Scientist Biochemistry / Pathologist / Hostel Rector/ Biotechnologist/ Scientist (Analytical Chemistry) (at Academic Level 11 with rationalized entry pay of Rs. 68,900/-) |
+| Assistant Professor / Hospital Registrar/ Subject Matter Specialist / Scientist Animal Science/ Scientist Biochemistry / Pathologist / Hostel Rector/ Biotechnologist/ Scientist (Analytical Chemistry) (at Rs. 8000 AGP in PB Rs. 15,600 - 39,100) | Assistant Professor / Hospital Registrar/ Subject Matter Specialist / Scientist Animal Science/ Scientist Biochemistry / Pathologist / Hostel Rector/ Biotechnologist/ Scientist (Analytical Chemistry) (at Academic Level 12 with rationalized entry pay of Rs. 79,800/-) |
+| Associate Professor/ Deputy Director of Research /Research Officer/ Hospital Superintendent/ Chief Extension Education officer (at Rs. 9000 AGP in PB Rs. 37,400 - 67,000) | Associate Professor / Deputy Director of Research Research Officer/ Hospital Superintendent/ Chief Extension Education officer (at Academic Level 13A with rationalized entry pay of Rs. 1,31,400/-) |
+| Professor/ HOD (at Rs. 10,000 AGP in PB Rs. 37,400 - 67,000) | Professor / HOD (at Academic Level 14 with rationalized entry pay of Rs. 1,44,200/-) |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 (iii) Revised pay for Librarian in Universities and Colleges :
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Existing Pay | Revised Pay |
+| Assistant Librarian / College Librarian / Librarian cum Information Officer (at Rs. 6000 AGP in PB Rs. 15,600 - 39,100) | Assistant Librarian / College Librarian/ Librarian cum Information Officer (at Academic Level 10 with rationalized entry pay of Rs. 57,700/-) |
+| Assistant Librarian / College Librarian / Librarian cum Information Officer (at Rs. 7000 AGP in PB Rs. 15,600 - 39,100) | Assistant Librarian / College Librarian / Librarian cum Information Officer (at Academic Level 11 with rationalized entry pay of Rs. 68,900/-) |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Page 4 of 24
 # Page 5
 Government Resolution No.: MAPAVI 2019/C.R. No. 37/ MAFSU
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Assistant Librarian / College Librarian / Librarian cum Information Officer (at Rs. 8000 AGP in PB Rs. 15,600 - 39,100) | Assistant Librarian / College Librarian/ Librarian cum Information Officer (at Academic Level 12 with rationalized entry pay of Rs. 79,800/-) |
+| Deputy Librarian (at Rs. 9000 AGP in PB Rs. 37,400 - 67,000) | Deputy Librarian (at Academic Level 13A with rationalized entry pay of Rs. 1,31,400/-) |
+| University Librarian (at Rs. 10000 AGP in PB Rs. 37,400-67,000) | University Librarian (at Academic Level 14 with rationalized entry pay of Rs. 1,44,200/-) |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 (iv) Revised pay for Assistant Professor of Physical Education in Universities and
 Colleges :
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Existing Pay | Revised Pay |
+| Assistant Professor of Physical Education and Sports / Sports Officer (at Rs. 6000 AGP in PB Rs. 15,600 - 39,100) | Assistant Professor of Physical Education and Sports / Sports Officer (at Academic Level 10 with rationalized entry pay of Rs. 57,700/-) |
+| Assistant Professor of Physical Education and Sports / Sports Officer (at Rs. 7000 AGP in PB Rs. 15,600 - 39,100) | Assistant Professor of Physical Education and Sports / Sports Officer (at Academic Level 11 with rationalized entry pay of Rs. 68,900/-) |
+| Assistant Professor of Physical Education and Sports Sports Officer (at Rs. 8000 AGP in PB Rs. 15,600 - 39,100) | Assistant Professor of Physical Education and Sports / Sports Officer (at Academic Level 12 with rationalized entry pay of Rs. 79,800/-) |
+| University Deputy Director of Physical Education and Sports (at Rs. 9000 AGP in PB Rs. 37,400 - 67,000) | University Deputy Director of Physical Education and Sports (at Academic Level 13A with rationalized entry pay of Rs. 1,31,400/-) |
+| University Director of Physical Education and Sports (at Rs. 10000 AGP in PB Rs. 37,400 - 67,000) | University Director of Physical Education and Sports (at Academic Level 14 with rationalized entry pay of Rs. 1,44,200/-) |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 (v) Revised pay of Associate Dean/ Director cum Project Investigator :- The pay of the
 Associate Dean/ Director cum Project Investigator shall be equivalent to the pay of Professor
 i.e. at Academic level 14 with rationalized entry pay Rs. 1,44,200/- with the special allowance
@@ -490,6 +524,11 @@ fitness test are required to produce a medical certificate certifying that he/sh
 before undertaking such tests.
 b) On the production of such certificate mentioned in sub-clause (a) above, the candidate would be
 required to undertake the physical fitness test in accordance with the following norms:
+---------------------------------------------------------------------------------
+| Norms For | Run/Walk Test | Upto 30 Years | Upto 40 Years | Upto 45 Years | Upto 50 Years |
+| Men | 12 Minutes Run/Walk Test | 1800 Metres | 1500 Metres | 1200 Metres | 800 Metres |
+| Women | 8 Minutes Run/Walk Test | 1000 Metres | 800 Metres | 600 Metres | 400 Metres |
+---------------------------------------------------------------------------------
 (7) Increment (i) The annual increment is given in the Pay Matrix at 3%, with each cell being higher by 3%
 over the previous cell in the same level, rounded off to nearest 100. The annual increments to
 each employee would move up in the same academic level, with an employee moving from
