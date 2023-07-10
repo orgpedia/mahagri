@@ -15,7 +15,7 @@ Thus, a total amount of Rs. 2.045 crore is available for disbursement to the Dep
 # Page 2
 Government Resolution No. 0118/ No. 32/14-A
 Government Decision: Under this Government Decision, a total amount of Rs. 2.045 crore (Rs. Two Crore Four Lakh Fifty Thousand only) is being provided to the Commissioner (Agriculture) for the implementation of Brucellosis Control Programme (General Category) under the Animal Health Application (AHP) under Rashtriya Krishi Vikas Yojana-Raftaar in the year 2018-19 in the ratio of 60:40 between Central and State funding as under:
-(Amount₹ crore)|a. Name of the Scheme Funds sanctioned for General Category (60:40)
+(Rs crore)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 | A. No.           | The name of the scheme                                                 | Funds sanctioned for general category (60:40) |
 | the central part | The part of the state                                                  | Total                                         |
