@@ -1,0 +1,102 @@
+{
+  "name": "20090804130712001.pdf",
+  "file_id": "f_aac7d7063fdfb43e",
+  "source": {
+    "path": "input/pdfs/2009-08/20090804130712001.pdf",
+    "sha256": "aac7d7063fdfb43eaca03decc448150d5d1d2e86dd2bc901176b25f900ebc8ab"
+  },
+  "state": {
+    "last_revision": 14,
+    "edits_file": "20090804130712001.pdf.edits.yml",
+    "steps": {}
+  },
+  "status": "done",
+  "issues": {
+    "total": 4,
+    "by_code": {
+      "core:lines_run_together": {
+        "severity": "info",
+        "count": 1,
+        "step": "block_check"
+      },
+      "core:table_review": {
+        "severity": "info",
+        "count": 1,
+        "step": "block_check"
+      },
+      "core:text_by_ocr": {
+        "severity": "info",
+        "count": 2,
+        "step": "text"
+      }
+    }
+  },
+  "versions": {
+    "text": {
+      "task": "pdf_text",
+      "version": "2",
+      "config_hash": null
+    },
+    "text_check": {
+      "task": "deva_check",
+      "version": "2",
+      "config_hash": "9a1b77773d6e120b"
+    },
+    "lines": {
+      "task": "ruled_lines",
+      "version": "1",
+      "config_hash": "4f706b173995149c"
+    },
+    "layout": {
+      "task": "pdftable_finder",
+      "version": "4",
+      "config_hash": "73a5da94cb815e43"
+    },
+    "tables": {
+      "task": "pdftable_cells",
+      "version": "4",
+      "config_hash": "351dc1f0d6ff199b"
+    },
+    "table_check": {
+      "task": "ruled_table_check",
+      "version": "1",
+      "config_hash": "49d9164e34fe06f1"
+    },
+    "split": {
+      "task": "section_splitter",
+      "version": "1",
+      "config_hash": "74c13122b03cd09f"
+    },
+    "roles": {
+      "task": "pattern_tagger",
+      "version": "1",
+      "config_hash": "e374c427e4225180"
+    },
+    "lists": {
+      "task": "list_finder",
+      "version": "2",
+      "config_hash": "ca8c008a37ab79e8"
+    },
+    "role_check": {
+      "task": "pattern_check",
+      "version": "1",
+      "config_hash": "13dc2becc37c4f9c"
+    },
+    "block_check": {
+      "task": "block_check",
+      "version": "1",
+      "config_hash": "d7547d9eb4bde633"
+    },
+    "values": {
+      "task": "value_tagger",
+      "version": "1",
+      "config_hash": "a4cacb04eb078be5"
+    }
+  },
+  "output": {
+    "path": "../../export/build_doc_/20090804130712001.pdf.govdoc.json.zst",
+    "sha256": "bf98aa2cb7c30169d887f6da13703a0e30fbf71d39d50510f89233f742479b82",
+    "size": 23173,
+    "revision": 14
+  }
+}

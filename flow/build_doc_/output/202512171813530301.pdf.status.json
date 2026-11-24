@@ -1,0 +1,10 @@
+{
+  "name": "202512171813530301.pdf",
+  "file_id": null,
+  "source": {
+    "path": "input/pdfs/2025-12/202512171813530301.pdf",
+    "sha256": "ae7f2eb4ed7c3ce12b2f30517d0b7fc2983e9a8896d9fca9866a1a0af618b719"
+  },
+  "status": "skipped",
+  "reason": "49 pages, over max_pages 20"
+}

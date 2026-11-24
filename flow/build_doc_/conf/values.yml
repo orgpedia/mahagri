@@ -1,0 +1,29 @@
+# Written by `mahdept values` from department.yml (make does it before every docflow command): never edit it here.
+# flow.yml puts these in for ${name} when it loads (orgpedia/doc specs/docflow.md §P4a).
+data:
+  profiles: mh_gr-1
+  registry: empty
+  memory: empty
+profiles: mh_gr-1
+masthead_names: कृषी\s*,\s*पशुसंवर्धन\s*,\s*दुग्धव्यवसाय\s*विकास\s*व\s*मत्स्यव्यवसाय\s*विभाग
+masthead_words: कृषी
+max_pages: 20
+ocr: indic
+department:
+  code: mahagri
+  kind: department
+  names:
+    en: Agriculture, Dairy Development, Animal Husbandry and Fisheries Department
+  masthead:
+    names:
+    - कृषी,पशुसंवर्धन, दुग्धव्यवसाय विकास व मत्स्यव्यवसाय विभाग
+  max_pages: 20
+  cloud_vision_budget: 1.0
+  ocr: indic
+  set_aside:
+    rules: []
+  shared_lists: LFS/mahGRs/flow/mahagri/common
+  data:
+    profiles: mh_gr-1
+    registry: empty
+    memory: empty
