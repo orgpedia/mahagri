@@ -1,6 +1,6 @@
 # translate_: a Department's GRs in English
 
-**Version:** 0.5 (November 19: text_ is build_doc_ and the lists task build_glossary_, the template's decision 40; the default target makes the report, `make review` opens the pilot's page; decided, not built). 0.4 (November 19: the task keeps its own files, orgpedia/doc `docflow.md` §N9: its input linked a file each, its layers moved to `export/` by `make export`, Gemini's answers in `responses/`, the pinned lists in `input/data/`, §T2). 0.3 (November 18: how a GR is translated, step by step, §T3; a batch asks each sentence once and keeps each answer by sentence, §T4; what it costs, measured, §T5; cheaper models, proposed, §T6). 0.2 (November 17: the routes after a person's review of the pilot; the review page; names Gemini spelt kept). 0.1 (November 17, 2026: set up as a task of its own; the pilot first) · @Mukund
+**Version:** 0.6 (November 23: §T6 the trial of the cheaper Gemini models of November 18 written down, the models our project can use, the mixes and their cost, and the joint review across models to come, open models on Modal among them). 0.5 (November 19: text_ is build_doc_ and the lists task build_glossary_, the template's decision 40; the default target makes the report, `make review` opens the pilot's page; decided, not built). 0.4 (November 19: the task keeps its own files, orgpedia/doc `docflow.md` §N9: its input linked a file each, its layers moved to `export/` by `make export`, Gemini's answers in `responses/`, the pinned lists in `input/data/`, §T2). 0.3 (November 18: how a GR is translated, step by step, §T3; a batch asks each sentence once and keeps each answer by sentence, §T4; what it costs, measured, §T5; cheaper models, proposed, §T6). 0.2 (November 17: the routes after a person's review of the pilot; the review page; names Gemini spelt kept). 0.1 (November 17, 2026: set up as a task of its own; the pilot first) · @Mukund
 
 **Builds on:** the template's spec (`spec.md` §G3, decision 30), `orgpedia/doc` `specs/docflow.md` §P19 (a task's folder; a task over another's files) and §P11b (paid calls by batch), `specs/govdoc.md` §11.5 (layer files), `specs/mahgrs.md` Part L (translation by annotation: the routes, the memory, the glossary, the checks; its decisions log). The build_doc_ task's spec (`../build_doc_/spec.md`; text_ until November 19) says what it reads. The code: docflow's `tasks/glossary.py` (`glossary_tagger`), `tasks/translate.py` (`translate`, version 10) and `batch.py`.
 
@@ -91,12 +91,50 @@ The default target writes `review/translate/pilot.txt` and `pilot.json`, and `ma
 
   Gemini 3.8 Flash's price doubles on January 1, 2027: what stays on it is best sent before. Public Works from 2019: 3,075 GRs, about $10; Finance: 1,393, about $5.
 
-## T6. Cheaper models (proposed, not tried)
+## T6. Cheaper models (tried November 18; a joint review across models to come)
 
-* **Prices by batch** (a million tokens, in / out): 3.8 Flash $0.375 / $1.875 (twice from 2027); 3.5 Flash-Lite $0.15 / $1.25; 3.1 Flash-Lite $0.125 / $0.75; 2.5 Flash-Lite $0.05 / $0.20 (an older model; 2.5 Pro and Flash are routed to newer ones on December 1, 2026). With the pilot's tokens, 2.5 Flash-Lite is about a ninth of 3.8 Flash's price today.
-* **Which model where:** a cheap model first and the stronger one only where the checks fail it (a code lost, a glossary name not used, Marathi left, digits that differ, a length far off), so the cost is near the cheap model's and the quality is the stronger one's where it matters; more readily for recent GRs (read and searched most) and long prose; short sentences (three quarters of them, 40% of the text) least at risk.
-* **To try first:** the same 50 PWD GRs on 2.5, 3.1 and 3.5 Flash-Lite (about $0.40 by batch): each model's check failures (its escalation rate, so its real cost), how close its English is to 3.8 Flash's already reviewed, and a page of the sentences where they differ for a person to read. A change of model is one line of `flow.yml` (`model:`); the prompt, codes, glossary and call cache stay.
-* **Open models** (on Modal or another GPU host): a model fine-tuned for Indic translation with a fixed prompt (Bodhan AI's Indic Translate) cannot take the codes and the glossary, so it would serve only the plain 18%; a general open model that follows the prompt could, for GPU hours, at a quality to be measured.
+**Prices by batch** (a million tokens, in / out; Vertex AI, checked November 18): 3.8 Flash $0.375 / $1.875 (twice from January 1, 2027: $0.75 / $3.75); 3.5 Flash-Lite $0.15 / $1.25; 3.1 Flash-Lite $0.125 / $0.75; 3 Flash (preview) $0.25 / $1.50; Gemini 4 models $0.75–2.00 / $3.75–10.00. Thinking is billed as output.
+
+**What our Vertex project can use** (checked November 18 with a free token count, in the two regions tried): 3.1 Flash-Lite, 3.5 Flash-Lite, 3 Flash (preview), 3.6 and 3.8 Flash, the Gemini 4 models. **Not available to us:** 2.5 Flash-Lite (404 `NOT_FOUND` for `gemini-2.5-flash-lite` and `gemini-2.5-flash-lite-001`, in both regions; it seems to be offered only through the separate Gemini API of AI Studio, another key and another billing), 2.0 and 2.5 Flash and Flash-Lite, Gemma 4. So 3.1 Flash-Lite is the cheapest Gemini model we can use; the $0.05 / $0.20 of 2.5 Flash-Lite is out of reach.
+
+**The trial** (November 18, by batch, about $0.23 in all): the 1,250 distinct sentences PWD's 50 pilot GRs sent to the model, each model given exactly what 3.8 Flash was given (the same coded sentences, glossary lines, instructions and chunks); 3.8 Flash's answers, reviewed by the person on November 17, the baseline. The checks are translate's own (§T3: an empty answer, a code lost or added) and the review page's (a glossary name not used, digits that differ from Flash's, Marathi left); closeness to Flash is a similarity of the two English sentences, from 0 to 1, put in three bands (same or nearly, close, far; the trial's script and its thresholds did not survive, below).
+
+| | 3.1 Flash-Lite, thinking low | **3.1 Flash-Lite, thinking minimal** | 3.5 Flash-Lite (no thinking) |
+|---|--:|--:|--:|
+| Fails any check | 2.6% | **3.4%** | 4.6% |
+| … a code lost, or an empty answer | 0.3% | 1.2% | 1.0% |
+| … a glossary name not used | 0.8% | 1.1% | 2.2% |
+| … digits differ from Flash's | 0.8% | 0.4% | 0.6% |
+| Same as Flash, or nearly | 35% | | 29% |
+| Close to Flash | 47% | | 51% |
+| Same, nearly or close | 82% | **83%** | 80% |
+| Far from Flash | 3.4% | 3.9% | 4.2% |
+| Thinking tokens | 41,621 | **0** | 0 |
+| Batch cost | $0.084 | **$0.056** | $0.082 |
+| With the failures sent on to 3.8 Flash | $0.088 | **$0.062** | $0.090 |
+| Share of 3.8 Flash's cost for the same sentences (about $0.146) | ~60% | **~42%** | ~62% |
+
+* **3.1 is better than 3.5,** though 3.5 is the newer: fewer failures and more answers the same as Flash's.
+* **The saving is about 40–60%, not the three to nine times the price list suggests:** 3.1 thinks at "low" (41,621 thinking tokens on 58,000 of answer, billed as output); at "minimal" (the 3.x models have no setting that turns thinking off) it thinks not at all, and loses a little, mostly in codes (1.2% of answers lose one against 0.3%), which is exactly what the checks catch and send on.
+* **Length barely matters:** closeness to Flash is about 0.87–0.90 at every length. Long sentences fail a little more often: with thinking low, 4.3% at 40 words and over against 2.3% under 10; with thinking minimal, 5.9% at 20–39 words against 3.4% overall.
+* **After January 1, 2027,** when 3.8 Flash's price doubles and the Lite models' do not, Lite with its failures sent on is under 30% of Flash.
+
+**The mixes, for every department's GRs from 2019** (96,020 GRs; short sentences on 3.1 Flash-Lite at minimal thinking, the long ones and every failure on 3.8 Flash):
+
+| Long sentences from | Sent to Flash | Share of the text | Now | After January 1, 2027 |
+|---|--:|--:|--:|--:|
+| (all on 3.8 Flash, as the flow is) | 100% | 100% | ~$320 | ~$635 |
+| 20 words | 24% of sentences | 57% | ~$240 | ~$420 |
+| 40 words | 6% of sentences | 23% | ~$175 | ~$250 |
+| (all on 3.1 Flash-Lite, the failures to Flash) | ~3% | | **~$130** | **~$135** |
+
+Long sentences hold most of the text, so sending them to Flash keeps most of the cost; the trial did not show Lite worse on them. For the 120,974 GRs whose PDFs are all text (`mahgrs.md` §W16, November 23): about $165 on Lite with the failures sent on, against about $400 all on Flash (about $170 against $800 after January 1).
+
+**Not decided.** A review page (`review/compare/flash-lite.html`) showed 50 sentences where a Lite answer failed a check or read otherwise than Flash's, for the person to mark; no marks were recorded and no model was chosen. The trial's files did not survive (the scratchpad was cleared and PWD's repo made again): the test set is made again from PWD's pilot (its translate_ step run with `DOCFLOW_DEFER`, which writes every request; 3.8 Flash's answers from its `responses/`).
+
+**The joint review** (the person's, November 23): the same sentences through every candidate, side by side for a person to read, with the checks counted for each: 3.8 Flash (the baseline), 3.1 Flash-Lite at minimal thinking, 3.5 Flash-Lite, and the open models served on Modal by our own translation service (`mahgrs.md` §L14), each with its cost per 1,000 sentences. A change of model is then one line of `flow.yml` (`provider:`, `model:`); the prompt, codes, glossary and call cache stay.
+
+**Open models.** A model fine-tuned for Indic translation with a fixed prompt (IndicTrans2; Bodhan AI's Indic Translate) cannot take the codes and the glossary, so it could serve only the plain sentences (about 18%); a general open model that follows the instructions can serve all, for GPU hours, at a quality the joint review measures.
 
 ## T7. Not built yet
 

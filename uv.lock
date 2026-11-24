@@ -1150,7 +1150,7 @@ requires-dist = [
     { name = "govdoc-flow", extras = ["ocr", "unipdf", "gcv", "gemini", "scans", "indic"], git = "https://github.com/orgpedia/doc?subdirectory=packages%2Fdocflow&tag=v0.7.2" },
     { name = "govdoc-studio", git = "https://github.com/orgpedia/doc?subdirectory=packages%2Fstudio&tag=v0.7.2" },
     { name = "huggingface-hub", specifier = ">=0.26" },
-    { name = "mahdept", git = "https://github.com/orgpedia/template.mahdept?subdirectory=packages%2Fmahdept&tag=v0.6.4" },
+    { name = "mahdept", git = "https://github.com/orgpedia/template.mahdept?subdirectory=packages%2Fmahdept&tag=v0.6.5" },
 ]
 
 [package.metadata.requires-dev]
@@ -1159,7 +1159,7 @@ dev = [{ name = "ruff", specifier = ">=0.6" }]
 [[package]]
 name = "mahdept"
 version = "0.1.0"
-source = { git = "https://github.com/orgpedia/template.mahdept?subdirectory=packages%2Fmahdept&tag=v0.6.4#9c2047549a26888b0fc8f57931d516f3750f0a3a" }
+source = { git = "https://github.com/orgpedia/template.mahdept?subdirectory=packages%2Fmahdept&tag=v0.6.5#36233cdae6ea5cb35d13bfc9026a156df4a0bc8e" }
 dependencies = [
     { name = "govdoc" },
     { name = "govdoc-flow" },

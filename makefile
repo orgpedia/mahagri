@@ -40,7 +40,7 @@ tasks := build_doc_ build_glossary_ translate_
 # make review TASK=<task>: which task's review make review opens
 TASK ?= build_doc_
 
-.PHONY: help install upgrade dev update_from_copier list_recent list_all pull_common pull_hf import input flow review scorecard export output push_hf clean_images clean_pdfs check studio
+.PHONY: help install upgrade dev update_from_copier list_recent list_all list_text_all pull_common pull_hf import input flow review scorecard export output push_hf clean_images clean_pdfs check studio
 
 help:
 	$(info Please use 'make <target>', where <target> is one of)
@@ -52,6 +52,8 @@ help:
 	$(info                 (commit first: copier needs a clean repo; one target with upgrade once both settle))
 	$(info   list_recent   import/pdfs.txt: the department's GRs on HF of the current and the last month (its files list))
 	$(info   list_all      import/pdfs.txt: every GR of the department on HF (its files list, pdfs/$(dept)/$(dept)_files.txt))
+	$(info   list_text_all import/pdfs.txt: only the GRs whose PDF is all text (the crawler's pdfinfo: no scans, no image)
+	$(info                 pages, no old fonts), for a run with no OCR; set ocr: none in department.yml for it)
 	$(info   pull_common   the department's lists; the other departments' sheets (from HF))
 	$(info   pull_hf       what import/pdfs.txt lists, from the HF dataset Orgpedia/mahGRs into LFS/mahGRs/: the PDFs')
 	$(info                 months, the tasks' GovDoc files of those months, every paid answer of the department)
@@ -122,6 +124,15 @@ list_recent list_all:
 	@$(say) "$@: the department's files list (pdfs/$(dept)/$(dept)_files.txt) from $(HF_DATASET)"
 	@$(hf_get) pdfs/$(dept)/$(dept)_files.txt > /dev/null
 	@$(run) mahdept list --$(subst list_,,$@) $(if $(QUIET),> /dev/null)
+
+# only the GRs whose PDF is all text, by the crawler's pdfinfo (mahgrs.md §W17): the scans, the PDFs with image pages or
+# old fonts and those with no pdfinfo wait for a later run. The files list and the pdfinfos fetched from the dataset
+list_text_all:
+	@test "$(kind)" != trial || { echo "$@: a trial's import/pdfs.txt is written by hand"; exit 1; }
+	@$(say) "$@: the department's files list and pdfinfos from $(HF_DATASET)"
+	@$(hf_get) pdfs/$(dept)/$(dept)_files.txt > /dev/null
+	@$(hf_get) --include "infos/$(dept)/pdfinfos/*" > /dev/null
+	@$(run) mahdept list --text-all $(if $(QUIET),> /dev/null)
 
 pull_hf:
 	@test -f import/pdfs.txt || { echo "pull_hf: no import/pdfs.txt (make list_all or list_recent; a trial's by hand)"; exit 1; }

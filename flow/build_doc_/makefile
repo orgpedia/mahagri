@@ -57,13 +57,16 @@ import: listed values input logs
 DEFER := logs/deferred.jsonl
 text_run = DOCFLOW_DEFER=$(DEFER) $(docflow) run $(flow) --steps import..text --progress off >> logs/info.text.log; \
 	rc=$$?; test $$rc -le 1 || exit $$rc
+# nothing deferred by the first text pass (a run with ocr: none, or every answer in the call cache): no batch and no
+# second or third pass, each of which would only find every file's stamp the same (about 0.2 s a GR)
+deferred := test ! -s $(DEFER) ||
 flow: listed values logs
 	@rm -rf logs/deferred.jsonl logs/deferred.jsonl.files; : > logs/info.text.log; : > logs/info.batch.log
 	$(text_run)
-	$(docflow) batch $(flow) $(DEFER) >> logs/info.batch.log
-	$(text_run)
-	$(docflow) batch $(flow) $(DEFER) >> logs/info.batch.log
-	$(text_run)
+	$(deferred) $(docflow) batch $(flow) $(DEFER) >> logs/info.batch.log
+	$(deferred) $(text_run)
+	$(deferred) $(docflow) batch $(flow) $(DEFER) >> logs/info.batch.log
+	$(deferred) $(text_run)
 	$(run) mahdept ocr pick > logs/info.pick.log && cat logs/info.pick.log
 	DOCFLOW_DEFER=$(DEFER) $(docflow) run $(flow) $(if $(QUIET),--progress off) > logs/info.log; rc=$$?; test $$rc -le 1 || exit $$rc; \
 	test $$rc -eq 0 || echo "flow: $$(wc -l < failed.txt | tr -d ' ') files failed (failed.txt; why: grep ERROR logs/info.log); make flow again runs only them"

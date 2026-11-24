@@ -39,7 +39,8 @@ cloud_vision_budget: 1.0
 
 # the pages read whole by OCR: indic (IndicOCR, its words on Tesseract's boxes; Cloud Vision on the budget above) or
 # gcv (Cloud Vision, every page: the departments read by it before IndicOCR, Finance, Public Works and Parliamentary
-# Affairs, so their pages paid for are not read again; orgpedia/doc specs/mahgrs.md §W16)
+# Affairs, so their pages paid for are not read again; orgpedia/doc specs/mahgrs.md §W16); none: no OCR, for a run on
+# the text PDFs alone (make list_text_all; §W17)
 ocr: indic
 
 # GRs set aside: their own kind of document (Finance's: lottery results), left out of every report and of the lists
