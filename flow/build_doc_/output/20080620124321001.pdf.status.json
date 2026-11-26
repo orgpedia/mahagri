@@ -13,15 +13,11 @@
       "text": {
         "status": "failed",
         "reason": "PdfiumError: Failed to load document (PDFium: Data format error).",
-        "at": "2026-11-24T17:09:34.131661+00:00"
+        "at": "2026-11-26T04:30:20.521585+00:00"
       }
     }
   },
   "status": "failed",
-  "problem": {
-    "step": "text",
-    "reason": "PdfiumError: Failed to load document (PDFium: Data format error)."
-  },
   "issues": {
     "total": 0,
     "by_code": {}
@@ -32,5 +28,9 @@
     "sha256": "5d64ee4c10a3f91ad3a0999744b091d94c13f81dcda342f577d4ce9937fb869c",
     "size": 360,
     "revision": 1
+  },
+  "problem": {
+    "step": "text",
+    "reason": "PdfiumError: Failed to load document (PDFium: Data format error)."
   }
 }
